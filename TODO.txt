@@ -1,0 +1,34 @@
+- Document in INSTALL.txt what is required to use the tools in this package (Runtime Requirements).
+  For example, state the version of MAPLE used for the scripts, MATLAB.
+
+- Document purpose and usage of each script and executable either within the source file
+  itself (in the file header at the top), or in the documentation .rst files.
+  
+  In case of MATLAB scripts/functions, it might be reasonable to have a documentation of
+  the input arguments within the MATLAB help comment at the top of the file.
+
+- Add some example input data to example/ and include in the description of the tools
+  how to call them with this input data and what the expected output is.
+
+- Make clear in the documentation if a script has to be modified before use as it contains
+  fixed file paths and that it does not process any input arguments (if that is the case).
+  The reader must be aware that the tool cannot be used as is.
+
+- Eventually, most scripts should be modified to accept input arguments such as paths
+  to the input data, output directory,... and help/usage output in order to make them
+  more generally useful.
+
+- Replace use of SbiaUtils functions of the SBIA Toolkit in Python scripts by the
+  corresponding functions of the BASIS utilities for Python.
+
+- What is it about the file test/spherePointsFiveHundred ? How to use it ?
+
+- What does the file example/Bmat.h contain ? What would I want to use it for ? It doesn't
+  seem to be used by any example program. Please document on top of this file.
+
+
+- Are the spherePoints*.h header files commonly/widely used in this field ? Do they
+  have value for others to make use of these data files ? If yes, they might be also
+  well placed in include/sbia/hardiscalars/. E.g., there would be only one
+  include/sbia/hardiscalars/sphere1000points.h file, instead of three copies in
+  example/, src/tools/, and test/...
